@@ -12,14 +12,18 @@ public class Website{
     String author;
     //String path;
     public String createWebsite(){
+        /*
+         * Setting path equal to the directory the user is using
+         * then creating a new file with the path
+         */
         String path = System.getProperty("user.dir");
         path += "/website/"+siteName;
         File website = new File(path);
-        boolean websiteMade = website.mkdir();
 
         return path;
     }
     public String createJs(){
+
         String path = System.getProperty("user.dir");
 
         path +="/website/"+ siteName + "/js";
@@ -43,7 +47,7 @@ public class Website{
         String html = "<title>"+siteName+"</title>\n<meta>"+author+"</meta>";
 
         try{
-            FileWriter writer = new FileWriter(new File(path +"//index.html"));
+            FileWriter writer = new FileWriter(new File(path));
             writer.write(html);
             writer.close();
             System.out.println("Created " + path+"\\index.html");
