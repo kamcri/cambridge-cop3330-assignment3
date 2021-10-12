@@ -1,0 +1,4 @@
+@startuml
+App : +main()
+App : +split()
+@enduml
