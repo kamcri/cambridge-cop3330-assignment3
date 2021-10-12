@@ -1,0 +1,14 @@
+@startuml
+App <|-- Website
+Class App{
++{static}main()
+}
+Class Website{
+ String siteName
+ String author
++createWebsite()
++createJs()
++createCSS()
++createHTML()
+}
+@enduml
