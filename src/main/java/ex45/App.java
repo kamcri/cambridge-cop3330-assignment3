@@ -20,7 +20,7 @@ public class App {
 
         readF.read();
 
-        ArrayList<String> list = readF.newlist();
+        ArrayList<String> list = readF.newList();
 
         writeFile wr = new writeFile(outputFile, list);
         wr.writeFile();
@@ -51,7 +51,7 @@ class readFile {
             sc.close();
         }
     }
-    public ArrayList<String> newlist(){
+    public ArrayList<String> newList(){
         return list;
     }
 }

@@ -1,0 +1,20 @@
+@startuml
+App <|-- readFile
+App <|-- writeFile
+Class App{
++{static}main()
+}
+Class readFile{
+ -ArrayList<String> list
+ -Scanner sc
+ +readFile()
+ +readFile()
+ +ArrayList<String> newList()
+}
+Class writeFile{
+-ArrayList<String> list
+-FileWriter writer
++writeFile()
++readFile()
+}
+@enduml
