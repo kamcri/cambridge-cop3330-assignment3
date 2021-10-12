@@ -16,7 +16,7 @@ public class App
     public static void readFile() throws Exception {
         /*
         * Reads everything from file into an ArrayList. After reading,
-        * the list is converted into an array so it can be sorted.
+        * the list is converted into an array, so it can be sorted.
         * */
 
         ArrayList<String> input = new ArrayList<>();

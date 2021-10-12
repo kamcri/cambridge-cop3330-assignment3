@@ -1,0 +1,6 @@
+@startuml
+App : +main()
+App : +readFile()
+App : +sort()
+App : +write()
+@enduml
