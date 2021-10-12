@@ -6,8 +6,7 @@ package ex46;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 
 public class App {
     public static void main(String[] args) {
@@ -26,14 +25,23 @@ public class App {
             sc.close();
             String[] words = new String[input.size()];
             words = input.toArray(words);
-            search(words);
+            search(myFile);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
     }
-    public static void search(String[] words){
-        for(int i = 0; i < words.length; i++){
+    public static void search(File file){
+        Map<String, Integer> Words = new HashMap<>();
 
+        try (Scanner sc = new Scanner(file)){
+            sc.useDelimiter("[^A-Za-z]+");
+            while (sc.hasNext()) {
+                String word = sc.next();
+                Integer count = Words.get(word);
+                Words.put(word, (count == null) ? 1 : count + 1);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
     }
 }
